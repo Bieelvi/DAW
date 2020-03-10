@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="" id="nome"><br>
+		<input type="" id="nota1"><br>
+		<input type="" name="nota2"><br>
+		<input type="" name="nota3"><br><br>
+		<input type="button" value="calcular" onclick="calculaMedia();"><br><br>
+		<input type="" id="media2"><br>
+		<p id="resultado"></p>
+	</form>
+
+</body>
+<script>
+	function calculaMedia(){
+		var nome = document.getElementById("nome").value;
+		var nota1 = document.getElementById("nota1").value;
+		var nota2 = document.forms[0].elements["nota2"].value;
+		var nota3 = document.forms[0].elements["nota3"].value;
+
+		var media = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3;
+
+		alert(nome + " sua media é "+ media);
+
+		document.getElementById("resultado").innerHTML += "<br>"+ nome +" sua media é: "+ media;
+		document.getElementById("media2").value = nome +" sua media é: "+ media;
+	}
+</script>
+</html>
